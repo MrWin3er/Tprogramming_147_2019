@@ -58,6 +58,15 @@ namespace CourseApp
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
+            Auto[] cars = new Auto[3];
+            cars[0] = new Auto("Mercedes Benz", 2005, 60);
+            cars[1] = new Auto("bugatti veyron", 2011, 150);
+            cars[2] = new Auto("lada vesta", 2005, 75);
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine(cars[i].ToString());
+            }
+
             Console.ReadLine();
         }
     }
