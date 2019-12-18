@@ -28,7 +28,7 @@ namespace CourseApp.Tests
         }
 
         [Fact]
-        public void TestTastA_Uncorrect()
+        public void TestTastAUncorrect()
         {
             List<double> res = Program.TaskA(3.25, 1.25, 0.7);
             Assert.Equal(new List<double>(), res);
