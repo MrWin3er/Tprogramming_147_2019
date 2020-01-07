@@ -8,7 +8,7 @@ namespace CourseApp.Tests
     [Fact]
     public void TestAge()
     {
-        Assert.Equal("Вам 19 лет, 4 месяцев и 19 дня", AgeClass.Age(21, 8, 2000));
+        Assert.Equal("Вам 19 лет, 4 месяцев и 18 дня", AgeClass.Age(21, 8, 2000));
     }
 
     [Fact]
