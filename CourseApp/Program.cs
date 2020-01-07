@@ -72,8 +72,7 @@ namespace CourseApp
             }
 
             Console.WriteLine("==========");
-
-             Console.WriteLine("Введите год своего рождения:");
+            Console.WriteLine("Введите год своего рождения:");
             int years = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите месяц своего рождения:");
             int months = Convert.ToInt32(Console.ReadLine());
