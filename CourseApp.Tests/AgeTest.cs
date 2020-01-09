@@ -8,7 +8,9 @@ namespace CourseApp.Tests
     [Fact]
     public void TestAge()
     {
-        Assert.Equal("Вам 19 лет, 4 месяцев и 18 дня", AgeClass.Age(21, 8, 2000));
+        DateTime birthday = new DateTime(2000, 8, 21);
+        DateTime exp = new DateTime(DateTime.Now.Ticks - birthday.Ticks);
+        Assert.Equal($"Вам {exp.Year - 1} лет, {exp.Month - 1} месяцев и {exp.Day - 1} дня", AgeClass.Age(birthday));
     }
 
     [Fact]
@@ -16,7 +18,7 @@ namespace CourseApp.Tests
         {
             try
             {
-                AgeClass.Age(1, 12, 2056);
+                AgeClass.Age(new DateTime(2056, 2, 12));
             }
             catch (Exception)
             {
@@ -28,7 +30,7 @@ namespace CourseApp.Tests
     [Fact]
     public void TestBirthdayToday()
     {
-        Assert.Equal("Вам 0 лет, 0 месяцев и 0 дня", AgeClass.Age(DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year));
+        Assert.Equal("Вам 0 лет, 0 месяцев и 0 дня", AgeClass.Age(DateTime.Now));
     }
     }
 }

@@ -79,7 +79,7 @@ namespace CourseApp
             Console.WriteLine("Введите день своего рождения:");
             int days = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(AgeClass.Age(days, months, years));
+            Console.WriteLine(AgeClass.Age(new DateTime(years, months, days)));
             Console.WriteLine("==========");
 
             Console.ReadLine();

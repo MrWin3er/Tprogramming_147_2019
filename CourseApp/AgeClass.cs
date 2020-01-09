@@ -4,9 +4,9 @@ namespace CourseApp
 {
     public class AgeClass
     {
-        public static string Age(int days, int months, int years)
+        public static string Age(DateTime birthday)
         {
-            DateTime res = DateCompare(new DateTime(years, months, days), DateTime.Now);
+            DateTime res = DateCompare(birthday, DateTime.Now);
             return $"Вам {res.Year - 1} лет, {res.Month - 1} месяцев и {res.Day - 1} дня";
         }
 
